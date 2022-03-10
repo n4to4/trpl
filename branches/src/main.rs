@@ -1,9 +1,12 @@
 fn main() {
-    let number = 3;
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
 
-    if number < 5 {
-        println!("condition was true");
-    } else {
-        println!("condition was false");
-    }
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("the result is {}", result);
 }
